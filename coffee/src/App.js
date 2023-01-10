@@ -55,7 +55,7 @@ function App() {
       <img src={IMG} alt="coffee" className='img-fluid' style={{height:"100vh",width:"100%"}} />
       <p className='text-muted lead '
         style={{textAlign:"center",marginTop:"10px",marginLeft:"5px"}}>
-        <small>{ account && <small>connected Account</small> -{account}}</small>
+        <small>connected Account -{account}</small>
       </p>
       <div className="container">
         <Buy state={state} />

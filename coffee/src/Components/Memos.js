@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './style.css'
 
 const Memos = ({state}) => {
   const [memos,setMemos]= useState([]);
