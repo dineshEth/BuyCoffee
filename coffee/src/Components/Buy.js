@@ -3,14 +3,18 @@ import { ethers } from 'ethers';
 
 const Buy = ({state}) => {
 
-  const {contract} = state;
+  const {contract} = state; 
 
   const buycoffee= async (event)=>{
-    event.preventDefault();
+    event.preventDefault();  // prevent from refreshing the page 
     const name = document.querySelector("#name").value;
     const message = document.querySelector("#message").value;
     const amount = {value:ethers.utils.parseEther("0.00001")};
-    console.log(name,message,contract);
+    // console.log(name,message,contract);
+
+    /**
+     * calling buyCoffee function of contract 
+     * to call contract function we need contract instance (address,abi,signer) */
     const transaction = await contract.buyCoffee(name,message,amount);
     await transaction.wait(); // wait for transaction to complete
     console.log("transaction complete")
