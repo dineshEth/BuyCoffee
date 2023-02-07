@@ -5,6 +5,7 @@ import './App.css';
 import Buy from './Components/Buy';
 import Memos from './Components/Memos';
 import IMG from './coffee.jpg';
+// import Table from './Components/Table';
 
 
 function App() {

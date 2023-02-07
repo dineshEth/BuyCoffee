@@ -6,6 +6,7 @@ const Memos = ({state}) => {
   useEffect(()=>{
     const memosMesssage =async ()=>{
       const memo = await contract.getMemo();
+      console.log( memo );
       setMemos(memo)
     };
     contract && memosMesssage();
